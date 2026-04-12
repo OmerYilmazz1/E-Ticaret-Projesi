@@ -1,0 +1,27 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Cart -->
+  <path d="M20 15 H40 L45 35 H25 Z" fill="url(#grad1)"></path>
+
+  <!-- Wheels -->
+  <circle cx="28" cy="42" r="4" fill="#1E88E5"></circle>
+  <circle cx="40" cy="42" r="4" fill="#1E88E5"></circle>
+
+  <!-- Bag -->
+  <rect x="28" y="18" width="12" height="10" rx="2" fill="#42A5F5"></rect>
+
+  <!-- Text -->
+  <text x="65" y="38" font-size="20" font-family="Arial" font-weight="bold">
+    <tspan fill="#1E88E5">Shop</tspan>
+    <tspan fill="#FB8C00">Ease</tspan>
+  </text>
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="20" y1="15" x2="45" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB8C00"></stop>
+      <stop offset="1" stop-color="#FDD835"></stop>
+    </linearGradient>
+  </defs>
+
+</svg>
