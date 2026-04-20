@@ -7,11 +7,14 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
 import CloseIcon from '@mui/icons-material/Close';
+import { useSelector } from 'react-redux';
 
 function Header() {
 
-    const [shoppingCount , setShoppingCount] = useState(0);
+    const {count} = useSelector((store) => store.counter);
+
     const [open , setOpen] = useState(false);
+    const [menuOpen , setMenuOpen] = useState(false);
   return (
     <div className='flex justify-between items-center bg-gray-300 w-[100%]'>
         <div>
@@ -28,8 +31,8 @@ function Header() {
                 </IconButton>
                 </div>
                 <div>
-                <IconButton color='inherit'>
-                 <Badge color="error" badgeContent={shoppingCount} max={9}>
+                <IconButton color='inherit' onClick={() => setMenuOpen(true)}>
+                 <Badge color="error" badgeContent={count} max={9}>
                     <ShoppingCartIcon />
                 </Badge>
                 </IconButton>
@@ -46,6 +49,8 @@ function Header() {
                         
                     <Link to='/products' className='p-4 font-bold font-mono border-b-2 border-black ' onClick={() => setOpen(false)}>Ürünler</Link>
                 </div>
+            </Drawer>
+             <Drawer anchor='top' open={menuOpen} onClose={() => setMenuOpen(false)}>
             </Drawer>
         </div>
   )
